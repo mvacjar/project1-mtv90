@@ -28,11 +28,12 @@ body {
 
 .navbar {
   box-shadow: 0px 5px 10px 0px #d29aff5f;
-  position: fixed;
   width: 100%;
   background: #212529;
   height: 60px;
   z-index: 12;
+  position: fixed;
+  top: 0;
 }
 
 .navbar-container {
@@ -250,9 +251,57 @@ img {
   transform: scaleX(1);
 }
 
+/* ---- Body Flexbox ---- */
+
+.layout-columns {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  margin-top: 100px;
+  gap: 3px;
+}
+
+.column-1 {
+  background-color: #2ed3cb;
+  width: 20%;
+  padding: 20px 20px 20px 30px;
+  margin: 0 auto;
+}
+
+.column-2 {
+  background-color: #f77db9;
+  width: 50%;
+  padding: 20px 20px 20px 30px;
+  margin: 0 auto;
+}
+
+.column-3 {
+  background-color: #ffe552;
+  width: 20%;
+  padding: 20px 20px 20px 30px;
+  margin: 0 auto;
+}
+
+.layout-rows {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 1.7%;
+}
+
+.row-1 {
+  background-color: #35409f;
+  height: 450%;
+  padding: 20px 20px 20px 30px;
+  margin-bottom: 20px;
+}
+
+.row-2 {
+  background-color: #e77964;
+  height: 40%;
+  padding: 20px 20px 20px 30px;
+}
+
 /* ---- Videos ---- */
 
-video {
-  width: 40%;
-  height: 40%;
-}
+/* ---- Videos ---- */
