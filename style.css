@@ -258,7 +258,6 @@ img {
   justify-content: space-around;
   margin: 100px 20px 20px 20px;
   gap: 1em;
-  border-radius: 20px;
 }
 
 .column-1 {
@@ -266,6 +265,25 @@ img {
   padding: 20px 20px 20px 30px;
   margin: 0 auto;
   width: 25%;
+}
+
+.title-lasted {
+  text-align: center;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.title-listened {
+  text-align: center;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+ul .list-listened {
+  list-style: circle;
 }
 
 /* ---- Music Player ---- */
@@ -277,15 +295,6 @@ img {
   flex-direction: column;
 }
 
-.title {
-  font-size: 20px;
-  font-weight: 400;
-  color: #fff;
-  display: grid;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
 .player {
   position: relative;
   box-sizing: content-box;
@@ -295,8 +304,25 @@ img {
   box-shadow: -5px -5px 15px #341d8566, 10px 10px 15px rgba(0, 0, 0, 0.1),
     inset -5px -5px 15px rgba(41, 41, 104, 0.456),
     inset 5px 5px 15px rgba(122, 134, 246, 0.1);
-  border-radius: 80px;
-  padding: 20px 30px;
+  padding: 30px 30px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  display: grid;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.evanescence {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  border: 50%;
+  margin-bottom: 10px;
 }
 
 .btns {
@@ -358,6 +384,7 @@ img {
 
 .column-2 p {
   margin-bottom: 15px;
+  font-size: 20px;
 }
 
 .column-2 button {
@@ -365,7 +392,6 @@ img {
   margin: 0 auto;
   font-size: 20px;
   background-color: #5d5dd1;
-  border-radius: 25px;
   border: 3px solid #2ed3cb;
   padding: 12px;
   box-shadow: 0 1px 1px 2px #1b7b7633;
@@ -387,14 +413,23 @@ img {
   background: #2ed3cb;
   border: 3px solid #5d5dd1;
 }
-/*
-  color: #f77db9;*/
 
 .column-3 {
   background-color: #ffe552;
   padding: 20px 20px 20px 30px;
   margin: 0 auto;
   width: 25%;
+}
+
+.together-1 {
+  padding: 0 auto;
+  margin: 0 auto;
+}
+
+.together-2 {
+  padding: 0 auto;
+  margin: 0 auto;
+  width: 185px;
 }
 
 .layout-rows {
@@ -406,10 +441,52 @@ img {
 }
 
 .row-1 {
-  background-color: #35409f;
+  background-color: #5862bd;
   height: 450%;
   padding: 20px 20px 20px 30px;
   margin-bottom: 20px;
+}
+
+.row-1 h2 {
+  margin-bottom: 10px;
+}
+
+.row-1 p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.prize-list {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.row-1 button {
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+  background-color: #ffe452;
+  border: 3px solid #e77964;
+  padding: 12px;
+  box-shadow: 0 1px 1px 2px #1b7b7633;
+}
+
+.row-1 a {
+  text-decoration: none;
+  color: #e77964;
+  cursor: pointed;
+}
+
+.row-1 a:hover {
+  text-decoration: none;
+  color: #ffe452;
+  cursor: pointed;
+}
+
+.row-1 button:hover {
+  background: #e77964;
+  color: #ffe452;
+  border: 3px solid #ffe452;
 }
 
 .row-2 {
