@@ -268,16 +268,14 @@ ul .list-listened:active {
 
 .news {
   border: 1px solid #b03e77;
-  background: rgba(221, 84, 153, 0.5);
+  background: rgba(241, 122, 182, 0.5);
   border-radius: 10px;
   margin: 20px auto;
   padding: 10px;
 }
 
 .news:hover {
-  background: rgba(173, 64, 119, 0.5);
-  width: 98%;
-  font-size: 15px;
+  background: rgba(209, 79, 144, 0.5);
 }
 
 .column-2 h1 {
