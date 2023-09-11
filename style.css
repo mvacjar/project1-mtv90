@@ -283,7 +283,7 @@ ul .list-listened:active {
   border: 1px solid #b03e77;
   background: rgba(241, 122, 182, 0.5);
   border-radius: 10px;
-  margin: 20px auto;
+  margin: 25px auto;
   padding: 10px;
 }
 
@@ -307,7 +307,6 @@ hr {
 
 .column-2 p {
   margin-bottom: 15px;
-  font-size: 20px;
 }
 
 .column-2 button {
@@ -334,6 +333,7 @@ hr {
 
 .column-2 button:active {
   background: #2ed3cb;
+  color: #5d5dd1;
   border: 3px solid #5d5dd1;
 }
 
@@ -368,6 +368,8 @@ hr {
 
 .test {
   margin: 10px 0px 15px;
+  overflow: scroll;
+  height: 57%;
 }
 
 .answer-test {
@@ -378,27 +380,27 @@ hr {
   display: block;
   margin: 0 auto;
   font-size: 20px;
-  background-color: #5d5dd1;
-  border: 3px solid #2ed3cb;
+  background-color: #ef9ca3;
+  border: 3px solid #4450c6;
   padding: 12px;
   box-shadow: 0 1px 1px 2px #1b7b7633;
   border-radius: 10px;
 }
 
+.column-3 button:active {
+  background: #4450c6;
+  border: 3px solid #ef9ca3;
+}
+
 .column-3 a {
   text-decoration: none;
-  color: #2ed3cb;
+  color: #4450c6;
   cursor: pointed;
 }
 
 .column-3 a:active {
   text-decoration: none;
-  color: #5d5dd1;
-}
-
-.column-3 button:active {
-  background: #2ed3cb;
-  border: 3px solid #5d5dd1;
+  color: #ef9ca3;
 }
 
 /* ---- rows ---- */
@@ -411,6 +413,8 @@ hr {
   border-radius: 5px;
 }
 
+/* ---- rows-1 ---- */
+
 .row-1 {
   background: rgb(88, 98, 189, 0.94);
   height: 450%;
@@ -421,20 +425,22 @@ hr {
 }
 
 .competition {
-  background: rgba(36, 46, 131, 0.318);
+  background: rgba(36, 46, 131, 0.193);
   padding: 10px 10px 10px 10px;
   border-radius: 10px;
+  border: 1px solid #151b57;
+  margin-bottom: 30px;
 }
 
 .competition:hover {
-  background: rgba(36, 46, 131, 0.318);
-  width: 99%;
+  background: rgba(50, 62, 177, 0.477);
   font-size: 15px;
 }
 
 .row-1 h1 {
   margin-bottom: 10px;
   font-size: 30px;
+  text-align: center;
 }
 
 .row-1 p {
@@ -458,6 +464,12 @@ hr {
   border-radius: 10px;
 }
 
+.button-vote:active {
+  background: #e77964;
+  color: #ffe452;
+  border: 3px solid #ffe452;
+}
+
 .link-vote {
   text-decoration: none;
   color: #e77964;
@@ -469,21 +481,65 @@ hr {
   cursor: pointed;
 }
 
-.button-vote:active {
-  background: #e77964;
-  color: #ffe452;
-  border: 3px solid #ffe452;
-}
+/* ---- row-2 ---- */
 
 .row-2 {
-  background: rgba(231, 122, 100, 0.94);
+  background: rgba(251, 138, 115, 0.94);
   height: 40%;
   padding: 20px 20px 20px 30px;
   border-radius: 10px;
   box-shadow: 1px 1px 15px #4a1409;
 }
 
-/* ---- Videos ---- */
+.row-2 h1 {
+  margin-bottom: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.row-2 p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.show-box {
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  border: 1px solid #d64c02;
+  margin: 25px auto;
+}
+
+.show-box {
+  font-size: 15px;
+}
+
+.watch-button {
+  display: block;
+  margin: 20px auto;
+  font-size: 20px;
+  background-color: #ffe452;
+  border: 3px solid #4551c7;
+  padding: 12px;
+  box-shadow: 0 1px 1px 2px #1b7b7633;
+  border-radius: 10px;
+}
+
+.watch-button:active {
+  background: #4551c7;
+  color: #ffe452;
+  border: 3px solid #ffe452;
+}
+
+.watch-link {
+  text-decoration: none;
+  color: #4551c7;
+}
+
+.watch-link:active {
+  text-decoration: none;
+  color: #ffe452;
+  cursor: pointed;
+}
 
 /* ---- Videos ---- */
 
