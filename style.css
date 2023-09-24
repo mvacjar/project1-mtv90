@@ -136,7 +136,6 @@ input {
 input::placeholder {
   color: #000;
   padding-left: 3px;
-  font-weight: 600;
   font-family: "Verdana", Tahoma, sans-serif;
 }
 
@@ -147,7 +146,168 @@ input::placeholder {
   font-weight: 600;
 }
 
+.signup-button {
+  padding: 3px 15px;
+  background-color: #19b4ac;
+  color: #fff;
+  font-weight: 600;
+}
+
+.join-text {
+  font-size: 1.6em;
+  margin-left: auto;
+  margin-right: auto;
+  animation: lightCrew 5s ease;
+  animation-iteration-count: infinite;
+  text-shadow: 4px 3px 3px #1d2360;
+}
+
+@keyframes lightCrew {
+  from {
+    color: #02b5c2;
+  }
+  25% {
+    color: #b555f9;
+  }
+  50% {
+    color: #fd79ac;
+  }
+  75% {
+    color: #ffe452;
+  }
+  to {
+    color: #f07b5f;
+  }
+}
+
+/* --- Concerts Title --- */
+
+.video-title-container {
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+}
+video {
+  width: 100%;
+  height: auto;
+}
+.clipped-video {
+  -webkit-clip-path: url(#text-overlay);
+  clip-path: url(#text-overlay);
+}
+
+svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+text {
+  font-size: 10rem;
+  font-weight: 800;
+}
+
 /* --- Portraits Cards --- */
+
+.flip-container-cards {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  margin: 30px;
+  position: relative;
+}
+
+.card-1,
+.card-2,
+.card-3,
+.card-4,
+.card-5 {
+  width: 25vh;
+  min-width: 15vh;
+  height: 40vh;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card-1:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-2:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-3:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-4:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-5:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(0deg);
+  padding: 20px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 3px solid #212529;
+  border-radius: 1px;
+}
+
+.portrait {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  box-shadow: 1px 1px 10px #323d9d;
+}
+
+.portrait-text {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0.8em;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  transform: rotateY(180deg);
+  background-image: linear-gradient(144deg, #00ddeb, #5b42f3 50%, #af40ff);
+  border: 3px solid #212529;
+  border-radius: 1px;
+}
 
 /* ---- Footer ---- */
 
@@ -177,6 +337,13 @@ input::placeholder {
 }
 
 /* ---- Media Query ---- */
+
+@media (max-width: 1370px) {
+  .card-4,
+  .card-5 {
+    display: none;
+  }
+}
 
 @media (max-width: 768px) {
   .navbar-container input[type="checkbox"],
@@ -301,5 +468,12 @@ input::placeholder {
   .navbar .menu-items li {
     margin-bottom: 1.5rem;
     font-size: 1.6rem;
+  }
+
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5 {
+    display: none;
   }
 }
