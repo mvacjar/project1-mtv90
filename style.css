@@ -4,7 +4,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  text-align: justify;
 }
 
 html {
@@ -108,13 +107,14 @@ body {
   overflow: hidden;
   backdrop-filter: blur(2px);
   margin: 10px;
-  padding: 5px;
   color: white;
   text-shadow: 2px 2px #323d9d;
   font-weight: 600;
   animation: slideToRight 1.5s ease-in-out;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 6px;
 }
 
@@ -139,18 +139,18 @@ input::placeholder {
   font-family: "Verdana", Tahoma, sans-serif;
 }
 
-.login-button {
+.login-button,
+.signup-button {
   padding: 3px 15px;
-  background-color: #4351c7;
   color: #fff;
   font-weight: 600;
 }
+.login-button {
+  background-color: #4351c7;
+}
 
 .signup-button {
-  padding: 3px 15px;
   background-color: #19b4ac;
-  color: #fff;
-  font-weight: 600;
 }
 
 .join-text {
@@ -159,7 +159,7 @@ input::placeholder {
   margin-right: auto;
   animation: lightCrew 5s ease;
   animation-iteration-count: infinite;
-  text-shadow: 4px 3px 3px #1d2360;
+  text-shadow: 3px 3px 2px #161b49;
 }
 
 @keyframes lightCrew {
@@ -167,7 +167,7 @@ input::placeholder {
     color: #02b5c2;
   }
   25% {
-    color: #b555f9;
+    color: #b254f5;
   }
   50% {
     color: #fd79ac;
@@ -180,7 +180,7 @@ input::placeholder {
   }
 }
 
-/* --- Concerts Title --- */
+/* --- Gig Title --- */
 
 .video-title-container {
   display: flex;
@@ -190,14 +190,15 @@ input::placeholder {
 .wrapper {
   position: relative;
   margin: 0 auto;
+  margin: 10px 0px 40px 0px;
 }
+
 video {
-  width: 100%;
+  width: 100vw;
   height: auto;
-  transform: translate(-22%, 0%);
   position: absolute;
-  left: 25%;
 }
+
 .clipped-video {
   -webkit-clip-path: url(#text-overlay);
   clip-path: url(#text-overlay);
@@ -210,19 +211,22 @@ svg {
 }
 
 text {
-  font-size: 10rem;
+  font-size: clamp(7rem, 15vw, 15vw);
   font-weight: 800;
 }
 
-/* --- Portraits Cards --- */
+/* --- Portrait Cards --- */
 
 .flip-container-cards {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  justify-content: space-evenly;
-  margin: 30px;
-  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 100px;
+  overflow: scroll;
+  white-space: nowrap;
+  width: 95vw;
+  height: auto;
+  margin: 0.5rem 1.5rem;
 }
 
 .card-1,
@@ -232,8 +236,11 @@ text {
 .card-5 {
   width: 25vh;
   min-width: 15vh;
-  height: 40vh;
+  height: 35vh;
   perspective: 1000px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  margin: 30px 0px;
 }
 
 .card-inner {
@@ -290,9 +297,6 @@ text {
   height: auto;
   position: relative;
   box-shadow: 1px 1px 10px #323d9d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .portrait-text {
@@ -300,8 +304,8 @@ text {
   font-size: 2rem;
   font-weight: 600;
   display: flex;
-  align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .card-back {
@@ -346,13 +350,6 @@ text {
 }
 
 /* ---- Media Query ---- */
-
-@media (max-width: 1370px) {
-  .card-4,
-  .card-5 {
-    display: none;
-  }
-}
 
 @media (max-width: 768px) {
   .navbar-container input[type="checkbox"],
@@ -458,6 +455,133 @@ text {
   .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-35deg);
   }
+
+  /* --- Login Form --- */
+
+  .login-form {
+    overflow: scroll;
+    display: grid;
+    padding: 10px 0px;
+  }
+
+  /* --- Gig Title --- */
+
+  .wrapper {
+    margin: 0px;
+    height: 4.5rem;
+  }
+
+  text {
+    font-size: clamp(6.8rem, 7vw, 10rem);
+    font-weight: 800;
+  }
+
+  /* --- Portrait Cards --- */
+
+  .flip-container-cards {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 100px;
+    overflow: scroll;
+    white-space: nowrap;
+    width: 95vw;
+    height: auto;
+    margin: 0.5rem 1.5rem;
+  }
+
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5 {
+    width: 25vh;
+    min-width: 15vh;
+    height: 35vh;
+    perspective: 1000px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    margin: 30px 0px;
+  }
+
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+
+  .card-1:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-2:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-3:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-4:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-5:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .card-front {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    font-size: 24px;
+    transform: rotateY(0deg);
+    padding: 20px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border: 3px solid #212529;
+    border-radius: 1px;
+  }
+
+  .portrait {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: 1px 1px 10px #323d9d;
+  }
+
+  .portrait-text {
+    margin-bottom: 0.8em;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: start;
+    color: #fff;
+    font-size: 24px;
+    transform: rotateY(180deg);
+    background-image: linear-gradient(144deg, #00ddeb, #5b42f3 50%, #af40ff);
+    border: 3px solid #212529;
+    border-radius: 1px;
+  }
 }
 
 @media (max-width: 424px) {
@@ -466,22 +590,46 @@ text {
     position: relative;
     object-position: top;
     float: right;
-    margin-top: 10px;
+    margin-top: 12px;
     margin-right: 10px;
+    width: 22%;
   }
 
   .navbar .menu-items {
     height: 50vh;
   }
 
+  /* --- Wallpaper --- */
+
   .navbar .menu-items li {
     margin-bottom: 1rem;
   }
 
-  .card-2,
-  .card-3,
-  .card-4,
-  .card-5 {
-    display: none;
+  .welcome-wallpapper {
+    width: 51vh;
+    height: auto;
+  }
+  /* --- Gig Title --- */
+
+  text {
+    font-size: clamp(3.9rem, 0vw, 0vw);
+  }
+
+  /* --- Portrait Cards --- */
+
+  .flip-container {
+    grid-template-columns: 1fr;
+  }
+
+  .flip-container-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px 0px;
+    margin: 0 auto;
+  }
+
+  .portrait-text {
+    font-size: 2rem;
+    text-align: center;
   }
 }
