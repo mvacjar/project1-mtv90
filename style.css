@@ -13,6 +13,7 @@ html {
 body {
   font-family: "Verdana", Geneva, Tahoma, sans-serif;
   background: url("images/background1.png");
+  min-width: 300px;
 }
 
 /* ---- navbar ---- */
@@ -72,7 +73,7 @@ body {
   transition: color 0.3s ease-in-out;
 }
 
-/* ---- Main - Welcomming ---- */
+/* ---- Welcomming ---- */
 
 .welcome-wallpapper {
   display: flex;
@@ -80,6 +81,8 @@ body {
   align-items: center;
   margin-top: 60px;
   animation: slideToDown 1.2s ease-in-out;
+
+  min-width: 300px;
 }
 
 .img-wallpapper {
@@ -130,7 +133,7 @@ body {
 input {
   background-color: #2ed3cbca;
   padding: 3px 0px;
-  width: 200px;
+  width: 10rem;
 }
 
 input::placeholder {
@@ -210,7 +213,7 @@ svg {
   align-items: center;
 }
 
-text {
+svg text {
   font-size: clamp(7rem, 15vw, 17vw);
   font-weight: 800;
 }
@@ -224,10 +227,9 @@ text {
   gap: 2rem;
   width: 100vw;
   height: auto;
+  min-width: 300px;
   overflow: scroll;
   white-space: nowrap;
-  /*
-  margin: 0.5rem 1.5rem;*/
 }
 
 .card-1,
@@ -494,12 +496,10 @@ text {
     height: 6rem;
   }
 
-  text {
+  svg text {
     font-size: clamp(3rem, 15vw, 16vw);
     font-weight: 800;
   }
-
-  /* --- Portrait Cards --- */
 }
 
 @media (max-width: 424px) {
@@ -531,32 +531,43 @@ text {
     width: 100%;
     height: auto;
   }
+
+  /* --- Login Form --- */
+  input {
+    width: 100%;
+  }
+
   /* --- Gig Title --- */
 
   .wrapper {
     height: 3rem;
   }
 
-  text {
+  svg text {
     font-size: clamp(1rem, 15vw, 20vw);
-    /*font-size: clamp(3.9rem, 0vw, 0rem);*/
   }
 
   /* --- Portrait Cards --- */
 
   .flip-container {
-    grid-template-columns: 1fr;
+    /*grid-template-columns: 1fr;*/
   }
 
   .flip-container-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem 0rem;
-    margin: 0 auto;
+    /*display: grid;
+    grid-template-columns: 1fr;*/
+  }
+
+  .card-1 {
+    margin-left: 1rem;
+  }
+
+  .card-5 {
+    margin-right: 1rem;
   }
 
   .portrait-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 }
