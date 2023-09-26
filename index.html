@@ -10,18 +10,19 @@
       rel="stylesheet"
     />
     <title>My MTV</title>
-    <link rel="icon" href="images/mtv-logo1.png" />
+    <link rel="icon" href="images/mtv-logo2" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="navbar-container">
-        <img
-          src="images/mtv-main.png"
-          alt="logo"
-          class="mtv-navbar"
-          width="110"
-        />
+        <a href="index.html">
+          <img
+            src="images/mtv-main2.png"
+            alt="logo"
+            class="mtv-navbar"
+            width="110"
+        /></a>
         <input type="checkbox" name="" id="" />
         <div class="hamburger-lines">
           <span class="line line1"></span>
@@ -62,11 +63,11 @@
           <form class="login-form">
             <div>
               <label for="uname">Username</label>
-              <input type="text" placeholder="Enter Username" name="uname" />
+              <input type="text" placeholder="Enter Username" name="username" />
             </div>
             <div>
               <label for="psw" class="psw">Password</label>
-              <input type="text" placeholder="Enter Password" name="psw" />
+              <input type="text" placeholder="Enter Password" name="password" />
             </div>
             <button class="login-button" type="submit">Login</button>
             <button class="signup-button" type="submit">Sign Up</button>
@@ -77,13 +78,34 @@
         </section>
       </article>
 
+      <article class="banner-container">
+        <a href="tamagochi.html" target="_blank"
+          ><img class="left-banner-tamagochi-video" src="images/tamagochi.gif"
+        /></a>
+        <a href="playstation.html" target="_blank"
+          ><img class="banner-tony-hawk-video" src="images/playstation.gif"
+        /></a>
+        <a href="tonyHawk.html" target="_blank"
+          ><img class="banner-tony-hawk-video" src="images/tonyh.gif"
+        /></a>
+        <a href="tonyHawkPS.html" target="_blank"
+          ><img class="banner-tony-hawk-video" src="images/tonyh-ps.gif"
+        /></a>
+        <a href="playstation.html" target="_blank"
+          ><img class="banner-tony-hawk-video" src="images/playstation.gif"
+        /></a>
+        <a href="tamagochi.html" target="_blank"
+          ><img class="right-banner-tamagochi-video" src="images/tamagochi.gif"
+        /></a>
+      </article>
+
       <div class="video-text-container">
         <div class="wrapper">
           <video class="clipped-video" muted loop autoplay>
             <source src="images/gig1.mp4" />
           </video>
           <svg>
-            <clipPath id="text-overlay" width="100%" height="100%">
+            <clipPath id="text-overlay">
               <text dy="0.9em">NEXT GIGS!</text>
             </clipPath>
           </svg>
@@ -134,7 +156,7 @@
                   <p class="portrait-text">Avril Lavigne</p>
                 </div>
                 <div class="card-back">
-                  <p>Mississippi Coast West</p>
+                  <p>Mississippi West Coast</p>
                 </div>
               </div>
             </div>
@@ -224,13 +246,24 @@
 
     <footer>
       <section class="footer-information">
-        <div class="footer-information-links">
+        <div class="footer-sign">
           Coded by <a class="link-git" href=""> Mvacjar </a> and hosted
           <a
             class="link-hosted"
             href="https://cerulean-queijadas-cceadf.netlify.app/"
             >here</a
           >
+        </div>
+        <div class="footer-menu">
+          <a class="footer-menu-link" href="index.html">Home</a>
+          <a class="footer-menu-link" href="#">News</a>
+          <a class="footer-menu-link" href="#">Music</a>
+          <a class="footer-menu-link" href="#">Bands</a>
+          <a class="footer-menu-link" href="#">Shows</a>
+          <a class="footer-menu-link" href="#">Shop</a>
+          <a class="footer-menu-link" href="#">Chat</a>
+          <a class="footer-menu-link" href="#">FAQs</a>
+          <a class="footer-menu-link" href="#">Contact Us</a>
         </div>
       </section>
     </footer>
