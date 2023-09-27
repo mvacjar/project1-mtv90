@@ -97,7 +97,7 @@ main {
   background: #ffffff25;
   border-radius: 1px;
   overflow: hidden;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(15px);
   color: #fff;
   font-weight: 600;
   display: grid;
