@@ -170,13 +170,13 @@ input::placeholder {
   margin: 0rem 1rem;
 }
 .login-button {
-  background-color: #4351c7;
-  padding: 0.2rem 0.8rem;
+  background-color: var(--color-purple);
+  padding: 0.3rem 0.8rem;
 }
 
 .signup-button {
-  background-color: #19b4ac;
-  padding: 0.2rem 0.8rem;
+  background-color: var(--color-turquoise);
+  padding: 0.3rem 0.8rem;
 }
 
 .signup-button a {
