@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <title>My MTV</title>
     <link rel="icon" href="images/mtv-logo.png" />
     <link rel="stylesheet" href="src/style.css" />
@@ -53,23 +59,25 @@
 
     <main>
       <article class="login-container">
-        <section>
-          <form class="login-form">
-            <div>
-              <label for="uname">Username</label>
-              <input type="text" placeholder="Enter Username" name="username" />
-            </div>
-            <div>
-              <label for="psw" class="psw">Password</label>
-              <input type="text" placeholder="Enter Password" name="password" />
-            </div>
+        <form class="login-form">
+          <div>
+            <label for="uname">Username</label>
+            <input type="text" placeholder="Enter Username" name="username" />
+          </div>
+          <div>
+            <label for="psw" class="psw">Password</label>
+            <input type="text" placeholder="Enter Password" name="password" />
+          </div>
+          <div class="buttons">
             <button class="login-button" type="submit">Log In</button>
-            <button class="signup-button" type="submit">Sign Up</button>
-            <div class="join-text">
-              <p><a href="signUp.html">Join the MTV crew!</a></p>
-            </div>
-          </form>
-        </section>
+            <button class="signup-button" type="submit">
+              <a href="signUp.html" target="_blank">Sign Up</a>
+            </button>
+          </div>
+          <div class="join-text">
+            <p><a href="signUp.html">Join the MTV crew!</a></p>
+          </div>
+        </form>
       </article>
 
       <article class="banner-container">
@@ -95,7 +103,7 @@
 
       <article class="video-text-wrapper">
         <div class="video-text-container">
-          <div class="wrapper">
+          <div class="wrapper-video">
             <video class="clipped-video" muted loop autoplay>
               <source src="images/gig1.mp4" />
             </video>
