@@ -199,6 +199,7 @@ input::placeholder {
 }
 
 /* --- Gig Title --- */
+
 .banner-container {
   display: flex;
   flex-direction: row;
@@ -214,9 +215,11 @@ input::placeholder {
 /* --- Video Title --- */
 
 .video-text-wrapper {
-  background-color: var(--color-black);
   padding-bottom: 1rem;
   padding-left: 0.5rem;
+  border: 2px solid #ffffff75;
+  box-shadow: 5px 5px 12px #00000035;
+  backdrop-filter: blur(15px);
 }
 
 .video-text-container {
@@ -256,7 +259,10 @@ svg text {
   position: relative;
   overflow: scroll;
   white-space: nowrap;
-  background-color: var(--color-black);
+  padding-top: 2rem;
+  border-bottom: 2px solid #ffffff75;
+  box-shadow: 5px 5px 12px #00000035;
+  backdrop-filter: blur(15px);
 }
 
 .flip-container-cards {
