@@ -789,7 +789,8 @@ svg text {
   }
 
   .welcome-wallpapper-sm {
-    width: 100vw;
+    max-width: 100%;
+    height: auto;
   }
 
   .img-wallpapper-lg {
