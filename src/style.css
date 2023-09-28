@@ -269,7 +269,7 @@ svg text {
   position: relative;
   overflow: scroll;
   white-space: nowrap;
-  padding-top: 2rem;
+  padding: 0rem 2rem;
   border-bottom: 2px solid #ffffff75;
   box-shadow: 5px 5px 12px #00000035;
   backdrop-filter: blur(15px);
@@ -279,9 +279,9 @@ svg text {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(8, 1fr);
-  gap: 2rem;
   width: 100vw;
   height: auto;
+  margin: 7rem 0rem;
 }
 
 .card-1,
@@ -298,15 +298,7 @@ svg text {
   perspective: 1000px;
   flex-shrink: 0;
   scroll-snap-align: start;
-  margin: 1rem 0rem 3rem 0rem;
-}
-
-.card-1 {
-  margin-left: 1rem;
-}
-
-.card-8 {
-  margin-right: 40px;
+  margin: 0rem 2rem 0rem 3rem;
 }
 
 .card-inner {
@@ -339,10 +331,10 @@ svg text {
   display: flex;
   flex-direction: column;
   font-size: 2rem;
-  padding: 1rem;
+  padding: 1.5rem;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #30d2ca);
-  border: 3px solid #212529;
+  border: 3px solid var(--color-black);
   border-radius: 1px;
   transform: rotateY(0deg);
 }
@@ -351,17 +343,18 @@ svg text {
   max-width: 100%;
   height: auto;
   position: relative;
-  box-shadow: 1px 1px 10px #323d9d;
+  box-shadow: 1px 1px 10px var(--color-purple);
 }
 
 .portrait-text {
   margin-bottom: 0.8em;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
   margin-top: 1rem;
   display: flex;
   justify-content: center;
   color: var(--color-black);
+  text-shadow: 1px 1px 2px var(--color-purple);
 }
 
 .card-back {
@@ -369,9 +362,11 @@ svg text {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  font-weight: 600;
   color: var(--color-black);
+  text-shadow: 2px 2px 2px var(--color-purple);
   background-image: linear-gradient(144deg, #30d2ca, #5b42f3 50%, #af40ff);
-  border: 3px solid #212529;
+  border: 3px solid var(--color-black);
   border-radius: 1px;
   transform: rotateY(180deg);
 }
@@ -385,7 +380,7 @@ svg text {
   justify-content: center;
   align-items: center;
   align-self: center;
-  margin: 2rem 0rem 5rem 0rem;
+  margin: 5rem 0rem 5rem 0rem;
   padding: 1.5rem 0rem;
   gap: 6rem;
 }
@@ -464,16 +459,65 @@ svg text {
   }
 }
 
+/* ---- Brand Section ---- */
+
+.wrapper-brand {
+  display: block;
+  padding: 10rem;
+  margin: 10rem 10rem;
+  overflow: hidden;
+  background-color: var(--color-purple);
+  border: 10px solid var(--color-black);
+  border-radius: 1px;
+  box-shadow: 10px 10px 20px var(--color-black);
+}
+.container-brand {
+  max-width: 100vh;
+}
+
+.inner-brand-up,
+.inner-brand-down {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+  animation: translateBrand 14s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes translateBrand {
+  0% {
+    transform: translateX(1500px);
+  }
+  100% {
+    transform: translateX(-1500px);
+  }
+}
+
+.inner-brand-up {
+  margin-bottom: 10rem;
+}
+
+.item-brand {
+  width: 33rem;
+  height: auto;
+  padding: 0rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ---- Footer ---- */
 
 .footer-information {
   max-width: 100%;
-  height: 15vh;
+  height: 30vh;
   background: var(--color-black);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   font-weight: 600;
+  font-size: 1.3rem;
 }
 
 .footer-sign {
@@ -509,7 +553,7 @@ svg text {
 
 /* ---- Media Query ---- */
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .navbar-container input[type="checkbox"],
   .navbar-container .hamburger-lines {
     display: flex;
@@ -624,13 +668,106 @@ svg text {
 
   /* --- Video Title --- */
 
+  .video-text-wrapper {
+    padding-bottom: 0rem;
+    padding-left: 0.1rem;
+  }
+
+  video {
+    width: 98vw;
+  }
+
+  svg {
+    width: 98vw;
+  }
+
   svg text {
-    font-size: clamp(3rem, 15vw, 16vw);
+    font-size: clamp(2rem, 15vw, 16vw);
     font-weight: 800;
+  }
+
+  /* --- Portrait Cards --- */
+
+  .flip-container {
+    padding: 0rem 2rem;
+  }
+
+  .flip-container-cards {
+    margin: 5rem 0rem;
+  }
+
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .card-5,
+  .card-6,
+  .card-7,
+  .card-8 {
+    width: 30vh;
+    height: 45vh;
+    margin: 0rem 2rem 0rem 3rem;
+  }
+
+  .card-front {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: 2px solid var(--color-black);
+    border-radius: 1px;
+  }
+
+  .portrait {
+    box-shadow: 1px 1px 10px var(--color-purple);
+  }
+
+  .portrait-text {
+    margin-bottom: 0.8em;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    text-shadow: 1px 1px 2px var(--color-purple);
+  }
+
+  .card-back {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 2px var(--color-purple);
+    border: 2px solid var(--color-black);
+  }
+
+  /* ---- Tickes Banner ---- */
+
+  .container-onsale {
+    justify-content: space-evenly;
+    margin: 2rem 0rem 5rem 0rem;
+    padding: 1rem 0rem;
+    gap: 2rem;
+  }
+
+  .text-onsale {
+    font-weight: 800;
+    font-size: 1.3rem;
+  }
+
+  .button-onsale {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.4rem;
+    text-shadow: 2px 2px 2px var(--color-purple);
+  }
+
+  .button-onsale:hover {
+    text-shadow: 1px 1px 2px var(--color-purple);
+  }
+
+  /* ---- Brand Section ---- */
+
+  .item-brand {
+    grid-row-gap: 100px;
   }
 }
 
-@media (max-width: 424px) {
+@media (max-width: 27rem) {
   .mtv-navbar {
     display: flex;
     position: relative;
@@ -676,6 +813,15 @@ svg text {
 
   /* --- Portrait Cards --- */
 
+  .flip-container {
+    padding: 0rem 2rem;
+    scroll-snap-type: block;
+  }
+
+  .flip-container-cards {
+    margin: 5rem 0rem;
+  }
+
   .card-1,
   .card-2,
   .card-3,
@@ -684,20 +830,61 @@ svg text {
   .card-6,
   .card-7,
   .card-8 {
-    width: 15vh;
-    min-width: 10vh;
-    height: 20vh;
+    width: 30vh;
+    height: 45vh;
+    margin: 0rem 3rem 0rem 3rem;
   }
 
-  .card-1 {
-    margin-left: 1rem;
+  .card-front {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: 2px solid var(--color-black);
+    border-radius: 1px;
   }
 
+  .portrait {
+    box-shadow: 1px 1px 10px var(--color-purple);
+  }
+
+  .portrait-text {
+    margin-bottom: 0.8em;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    text-shadow: 1px 1px 2px var(--color-purple);
+  }
+
+  .card-back {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 2px var(--color-purple);
+    border: 2px solid var(--color-black);
+  }
   .card-5 {
     margin-right: 1rem;
   }
 
-  .portrait-text {
-    font-size: 1.5rem;
+  /* --- Footer --- */
+
+  .footer-information {
+    max-width: 100%;
+    height: 20vh;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .footer-sign {
+    text-align: center;
+  }
+
+  .footer-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-menu-link {
+    text-decoration: none;
+    color: var(--color-white);
+    line-height: 1.2;
   }
 }
