@@ -406,4 +406,16 @@ main {
     width: 50vw;
     clear: both;
   }
+
+  .form-check {
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .buttons button {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
 }
