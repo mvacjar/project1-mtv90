@@ -33,7 +33,6 @@ body {
 }
 
 .navbar {
-  box-shadow: 0px 3px 3px 0px #4552c659;
   width: 100%;
   background: var(--color-black);
   height: 60px;
@@ -55,6 +54,7 @@ body {
   position: relative;
   object-position: top;
   margin-top: 1rem;
+  filter: drop-shadow(3px 3px 5px #292929);
 }
 
 .menu-items {
@@ -212,7 +212,7 @@ input::placeholder {
   }
 }
 
-/* --- Gig Title --- */
+/* --- Video Title --- */
 
 .banner-container {
   display: flex;
@@ -225,8 +225,6 @@ input::placeholder {
 .banner-container img {
   width: 100%;
 }
-
-/* --- Video Title --- */
 .video-text-wrapper {
   padding-bottom: 1rem;
   padding-left: 0.5rem;
@@ -459,42 +457,185 @@ svg text {
   }
 }
 
+/* ---- Grid Content --- */
+
+.wrapper-grid {
+  border: 2px solid #ffffff75;
+  border-radius: 1px;
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+  padding: 0.2rem;
+}
+.container-grid {
+  height: auto;
+  margin: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 5fr 4fr 4fr 4fr;
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    "header-grid header-grid header-grid header-grid"
+    "sidebar-grid main-grid main-grid main-grid"
+    "sidebar-grid content-grid-1 content-grid-1 content-grid-1"
+    "sidebar-grid content-grid-2 content-grid-2 content-grid-3"
+    "sidebar-grid footer-grid footer-grid footer-grid";
+}
+
+.container-grid h1 {
+  color: var(--color-white);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.header-grid {
+  grid-area: header-grid;
+  background-color: var(--color-black);
+  padding: 1rem;
+  text-align: center;
+  color: var(--color-white);
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.main-grid {
+  grid-area: main-grid;
+  height: 40vh;
+  padding: 1rem 2rem 2rem 3rem;
+  overflow: auto;
+}
+
+.main-grid-news {
+  margin: 2rem 0rem;
+  padding: 2rem;
+  background-color: var(--color-purple);
+  box-shadow: 5px 5px 10px #292929;
+}
+
+.main-grid-news:hover {
+  transform: scale(1.1);
+  transition: all 0.1s ease;
+}
+
+.main-grid-news h2 {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px #323d9d;
+}
+
+.main-grid-news p {
+  color: var(--color-white);
+  line-height: 2;
+}
+
+.sidebar-grid {
+  grid-area: sidebar-grid;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.sidebar-grid h1 {
+  text-align: start;
+}
+
+.container-chat {
+  border: 2px solid var(--color-black);
+  padding: 1rem 0.5rem;
+}
+
+.container-chat h3 {
+  color: var(--color-white);
+  text-transform: uppercase;
+  text-align: end;
+}
+
+.comments-wrap {
+  backdrop-filter: blur(4px);
+}
+
+.comments {
+  height: 30vw;
+  overflow: auto;
+  margin: 1rem 0rem;
+  background-image: url(../images/mtv-logo.png);
+  background-size: 300px 300px;
+  border: 2px solid var(--color-black);
+  background-repeat: no-repeat;
+}
+
+.comments p {
+  margin-bottom: 0.5rem;
+}
+
+.reply-button {
+  margin: 0.5rem 0rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.space-chat-section textarea {
+  width: 100%;
+  height: 10vh;
+  clear: both;
+}
+
+.content-grid-1 {
+  grid-area: content-grid-1;
+  background-color: var(--color-purple);
+  padding: 1rem 2rem 2rem 3rem;
+}
+
+.content-grid-2 {
+  grid-area: content-grid-2;
+  background-color: var(--color-turquoise);
+  padding: 1rem 2rem 2rem 3rem;
+}
+
+.content-grid-3 {
+  grid-area: content-grid-3;
+  background-color: var(--color-white);
+  padding: 1rem 2rem 2rem 3rem;
+}
+
+.footer-grid {
+  grid-area: footer-grid;
+  background-color: var(--color-yellow);
+  padding: 1rem 2rem 2rem 3rem;
+}
+
 /* ---- Brand Section ---- */
 
-.wrapper-brand {
+.container-brand {
   display: block;
-  padding: 10rem;
-  margin: 10rem 10rem;
+  padding: 10rem 0rem;
+  margin: 10rem 5rem;
   overflow: hidden;
   background-color: var(--color-purple);
-  border: 10px solid var(--color-black);
+  border: 5px solid var(--color-black);
   border-radius: 1px;
   box-shadow: 10px 10px 20px var(--color-black);
 }
-.container-brand {
-  max-width: 100vh;
-}
 
-.inner-brand-up,
-.inner-brand-down {
+.inner-up-brand,
+.inner-down-brand {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   align-items: center;
   animation: translateBrand 14s infinite;
   animation-timing-function: linear;
+  filter: drop-shadow(5px 5px 10px #292929);
 }
 
 @keyframes translateBrand {
   0% {
-    transform: translateX(1500px);
+    transform: translateX(1300px);
   }
   100% {
-    transform: translateX(-1500px);
+    transform: translateX(-2500px);
   }
 }
 
-.inner-brand-up {
+.inner-up-brand {
   margin-bottom: 10rem;
 }
 
@@ -552,6 +693,17 @@ svg text {
 }
 
 /* ---- Media Query ---- */
+
+@media (min-width: 112rem) {
+  @keyframes translateBrand {
+    0% {
+      transform: translateX(1500px);
+    }
+    100% {
+      transform: translateX(-2800px);
+    }
+  }
+}
 
 @media (max-width: 48rem) {
   .navbar-container input[type="checkbox"],
@@ -739,7 +891,7 @@ svg text {
 
   .container-onsale {
     justify-content: space-evenly;
-    margin: 2rem 0rem 5rem 0rem;
+    margin: 2rem 0rem;
     padding: 1rem 0rem;
     gap: 2rem;
   }
@@ -758,6 +910,25 @@ svg text {
 
   .button-onsale:hover {
     text-shadow: 1px 1px 2px var(--color-purple);
+  }
+
+  /* ---- Grid Content ---- */
+
+  .wrapper-grid {
+  }
+
+  .container-grid {
+    margin: 0.1rem;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 0.3fr 3fr 2fr 2fr 2fr 2.5fr;
+    grid-gap: 0.5rem;
+    grid-template-areas:
+      "header-grid header-grid"
+      "sidebar-grid main-grid"
+      "sidebar-grid content-grid-1"
+      "sidebar-grid content-grid-2"
+      "sidebar-grid content-grid-3"
+      "footer-grid footer-grid";
   }
 
   /* ---- Brand Section ---- */
@@ -865,7 +1036,23 @@ svg text {
     margin-right: 1rem;
   }
 
-  /* --- Footer --- */
+  /* ---- Grid Content ---- */
+
+  .container-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 8fr 5fr 7fr 7fr 7fr 5fr;
+    grid-gap: 0.5rem;
+    grid-template-areas:
+      "header-grid"
+      "main-grid"
+      "sidebar-grid"
+      "content-grid-1"
+      "content-grid-2"
+      "content-grid-3"
+      "footer-grid";
+  }
+
+  /* ---- Footer ---- */
 
   .footer-information {
     max-width: 100%;
