@@ -25,6 +25,11 @@ body {
   background: url("../images/background1.png");
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 /* ---- navbar ---- */
 
 .navbar input[type="checkbox"],
@@ -390,10 +395,10 @@ svg text {
   font-size: 2rem;
   color: var(--color-purple);
   -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-  animation: wavyText 1s ease infinite;
+  animation: jumperText 1s ease infinite;
 }
 
-@keyframes wavyText {
+@keyframes jumperText {
   0% {
     transform: translateY(0px);
   }
@@ -462,16 +467,15 @@ svg text {
 .wrapper-grid {
   border: 2px solid #ffffff75;
   border-radius: 1px;
-  overflow: hidden;
   backdrop-filter: blur(15px);
-  padding: 0.2rem;
+  padding: 0.3rem;
 }
 .container-grid {
-  height: auto;
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
+  height: 100rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 5fr 4fr 4fr 4fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
   grid-gap: 0.5rem;
   grid-template-areas:
     "header-grid header-grid header-grid header-grid"
@@ -485,10 +489,14 @@ svg text {
   color: var(--color-white);
   font-size: 2rem;
   text-align: center;
+  text-shadow: 2px 2px 3px var(--color-black);
 }
+
+/* Header */
 
 .header-grid {
   grid-area: header-grid;
+  height: 10vh;
   background-color: var(--color-black);
   padding: 1rem;
   text-align: center;
@@ -497,11 +505,17 @@ svg text {
   font-size: 3rem;
 }
 
+/* Main */
+
 .main-grid {
   grid-area: main-grid;
-  height: 40vh;
-  padding: 1rem 2rem 2rem 3rem;
-  overflow: auto;
+  max-height: rem;
+  overflow: scroll;
+  overflow-y: auto;
+  padding: 1rem 2rem;
+  border: 2px solid #ffffff75;
+  box-shadow: 5px 5px 12px #00000035;
+  backdrop-filter: blur(15px);
 }
 
 .main-grid-news {
@@ -529,77 +543,204 @@ svg text {
   line-height: 2;
 }
 
+/* Sidebar */
+
+.sidebar-grid-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+
 .sidebar-grid {
   grid-area: sidebar-grid;
   padding: 1rem 1rem 2rem 1rem;
+  border: 2px solid #ffffff75;
+  box-shadow: 5px 5px 12px #00000035;
+  backdrop-filter: blur(15px);
 }
 
 .sidebar-grid h1 {
-  text-align: start;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .container-chat {
   border: 2px solid var(--color-black);
   padding: 1rem 0.5rem;
+  background-color: var(--color-turquoise);
+  margin-bottom: 1rem;
 }
 
 .container-chat h3 {
   color: var(--color-white);
-  text-transform: uppercase;
   text-align: end;
+  text-shadow: 2px 2px 5px var(--color-black);
+}
+.comments-section {
+  height: 35vw;
+  overflow: auto;
+  margin: 1rem 0rem;
+  background-size: 300px 300px;
+  border: 2px solid var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  background-repeat: no-repeat;
 }
 
 .comments-wrap {
-  backdrop-filter: blur(4px);
+  padding: 0.5rem;
 }
 
-.comments {
-  height: 30vw;
-  overflow: auto;
-  margin: 1rem 0rem;
-  background-image: url(../images/mtv-logo.png);
-  background-size: 300px 300px;
-  border: 2px solid var(--color-black);
-  background-repeat: no-repeat;
+.comments-wrap h4 {
+  margin-top: 0.5rem;
 }
 
 .comments p {
   margin-bottom: 0.5rem;
 }
 
-.reply-button {
-  margin: 0.5rem 0rem;
-  padding: 0.2rem 0.4rem;
-}
-
 .space-chat-section textarea {
   width: 100%;
   height: 10vh;
   clear: both;
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
+
+.reply-button {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  margin: 0.5rem 0rem;
+  width: 100%;
+}
+
+.container-off-topic {
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: var(--color-black);
+  border: 2px solid var(--color-black);
+  overflow: auto;
+  white-space: wrap;
+  height: 37vw;
+}
+
+.off-topics {
+  background-color: var(--color-turquoise);
+  color: var(--color-black);
+  margin: 0.5rem;
+}
+
+.off-topics h4 {
+  margin: 0.3rem;
+  padding: 0.3rem 0rem;
+}
+
+.off-topic-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.off-topic-links a {
+  text-decoration: none;
+  color: var(--color-purple);
+}
+
+/* Container 1 */
 
 .content-grid-1 {
   grid-area: content-grid-1;
-  background-color: var(--color-purple);
   padding: 1rem 2rem 2rem 3rem;
+  border: 2px solid #ffffff75;
+  box-shadow: 5px 5px 12px #00000035;
+  backdrop-filter: blur(15px);
 }
+
+.interview-section {
+  margin: 1rem 0rem;
+}
+
+.eva-interview {
+  border-radius: 50%;
+  float: right;
+  margin: 2rem 1rem 0rem 2rem;
+  filter: drop-shadow(5px 5px 10px #292929);
+}
+
+.interview-text {
+  margin: 0rem 1rem;
+  padding: 2rem;
+  background-color: var(--color-yellow);
+  overflow: auto;
+  font-weight: 500;
+}
+
+.interview-text h2 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px var(--color-purple);
+}
+
+.interview-text p {
+  color: var(--color-black);
+  text-align: justify;
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+
+.interview-link {
+  text-align: end;
+  font-weight: 600;
+}
+
+.interview-link a {
+  text-decoration: none;
+  color: var(--color-purple);
+}
+
+/* Container 2 */
 
 .content-grid-2 {
   grid-area: content-grid-2;
   background-color: var(--color-turquoise);
-  padding: 1rem 2rem 2rem 3rem;
+  padding: 1rem;
+  border: 2px solid #ffffff75;
+  box-shadow: 5px 5px 12px #00000035;
+  backdrop-filter: blur(15px);
 }
+
+.music-list-section ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem;
+}
+
+.music-list-section li {
+  font-weight: 500;
+}
+/* Container 3 */
 
 .content-grid-3 {
   grid-area: content-grid-3;
   background-color: var(--color-white);
   padding: 1rem 2rem 2rem 3rem;
+  border: 2px solid #ffffff75;
+  box-shadow: 5px 5px 12px #00000035;
+  backdrop-filter: blur(15px);
 }
+
+/* Footer */
 
 .footer-grid {
   grid-area: footer-grid;
   background-color: var(--color-yellow);
   padding: 1rem 2rem 2rem 3rem;
+  border: 2px solid #ffffff75;
+  box-shadow: 5px 5px 12px #00000035;
+  backdrop-filter: blur(15px);
 }
 
 /* ---- Brand Section ---- */
@@ -914,9 +1055,6 @@ svg text {
 
   /* ---- Grid Content ---- */
 
-  .wrapper-grid {
-  }
-
   .container-grid {
     margin: 0.1rem;
     grid-template-columns: 1fr 2fr;
@@ -929,6 +1067,31 @@ svg text {
       "sidebar-grid content-grid-2"
       "sidebar-grid content-grid-3"
       "footer-grid footer-grid";
+  }
+
+  /* Header */
+
+  .header-grid {
+    height: auto;
+    font-weight: 800;
+    font-size: 2rem;
+  }
+
+  /* Main */
+
+  .main-grid {
+    height: 55vw;
+  }
+
+  /* Content 1 */
+
+  .interview-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .interview-image {
+    max-width: 100%;
   }
 
   /* ---- Brand Section ---- */
@@ -959,9 +1122,10 @@ svg text {
     margin-bottom: 1rem;
   }
 
-  .welcome-wallpapper-sm {
+  .img-wallpapper-sm {
     max-width: 100%;
     height: auto;
+    display: inline-block;
   }
 
   .img-wallpapper-lg {
@@ -986,7 +1150,7 @@ svg text {
   /* --- Portrait Cards --- */
 
   .flip-container {
-    padding: 0rem 2rem;
+    padding: 0rem 0rem;
     scroll-snap-type: block;
   }
 
@@ -1004,7 +1168,7 @@ svg text {
   .card-8 {
     width: 30vh;
     height: 45vh;
-    margin: 0rem 3rem 0rem 3rem;
+    margin-left: 2rem;
   }
 
   .card-front {
@@ -1040,7 +1204,7 @@ svg text {
 
   .container-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 8fr 5fr 7fr 7fr 7fr 5fr;
+    grid-template-rows: 0.4fr 4fr 3fr 7fr 7fr 7fr 5fr;
     grid-gap: 0.5rem;
     grid-template-areas:
       "header-grid"
