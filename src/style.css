@@ -217,7 +217,7 @@ input::placeholder {
   }
 }
 
-/* --- Video Title --- */
+/* --- Advertisment --- */
 
 .banner-container {
   display: flex;
@@ -230,6 +230,9 @@ input::placeholder {
 .banner-container img {
   width: 100%;
 }
+
+/* --- Video Title --- */
+
 .video-text-wrapper {
   padding-bottom: 1rem;
   padding-left: 0.5rem;
@@ -464,14 +467,6 @@ svg text {
 
 /* ---- Grid Content --- */
 
-/*.wrapper-grid {
-  border: 2px solid #ffffff75;
-  border-radius: 1px;
-  backdrop-filter: blur(15px);
-  padding: 0.3rem;
-  display: flex;
-}*/
-
 .container-grid {
   margin: 1rem 1rem;
   display: grid;
@@ -546,10 +541,6 @@ svg text {
 /* Sidebar */
 
 .sidebar-grid-wrapper {
-  /*
-  display: grid;
-  height: calc(100% - 10rem);
-  grid-template-rows: 1fr 1fr;*/
   display: flex;
   flex-direction: column;
 }
@@ -723,6 +714,7 @@ svg text {
 
 .music-list-section ul {
   display: grid;
+  overflow: auto;
   grid-template-columns: 1fr 1fr;
   margin: 1rem;
   padding: 1rem;
@@ -783,8 +775,13 @@ svg text {
   justify-content: center;
 }
 
-.living-img {
+img .living-img {
   padding: 1rem;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0rem 1rem 0rem 0rem;
 }
 
 .wrapper-article-videoclip {
@@ -868,7 +865,7 @@ svg text {
 
 .footer-information {
   max-width: 100%;
-  height: 30vh;
+  height: 40vh;
   background: var(--color-black);
   display: flex;
   align-items: center;
@@ -974,6 +971,10 @@ svg text {
   .container-grid {
     height: 230vh;
   }
+
+  .living-img {
+    padding: 0rem 1rem 0rem 0rem;
+  }
 }
 
 @media (min-width: 112rem) {
@@ -1002,6 +1003,60 @@ svg text {
 @media (max-width: 78rem) {
   .container-grid {
     height: 250vh;
+  }
+
+  .container-videoclip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .living-img {
+    padding: 0rem 1rem 0rem 0rem;
+    width: 25rem;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 63rem) {
+  .container-grid {
+    height: 270vh;
+    grid-template-rows: minmax(5.5rem, 0.17fr) minmax(25rem, 1fr) 1fr, 1fr 1fr;
+  }
+  /* Content Grid 1 */
+
+  .interview-text {
+    overflow: auto;
+    height: 40vh;
+  }
+
+  .interview-text p {
+    text-align: start;
+  }
+
+  .interview-text h2 {
+    margin-bottom: 6rem;
+  }
+
+  .eva-interview {
+    margin: 0rem 1rem 0rem 2rem;
+  }
+
+  /* Footer Grid*/
+
+  .container-videoclip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .living-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
 }
 
@@ -1299,7 +1354,7 @@ svg text {
     line-height: 2;
   }
 
-  /* ---- Footer Grid ---- */
+  /* Footer Grid */
 
   .footer-grid h1 {
     margin-bottom: 1rem;
@@ -1370,12 +1425,6 @@ svg text {
 
   .img-wallpapper-lg {
     display: none;
-  }
-
-  .img-wallpapper-two {
-    width: 100%;
-    height: auto;
-    display: unset;
   }
 
   /* --- Login Form --- */
@@ -1456,16 +1505,15 @@ svg text {
       "footer-grid";
   }
 
-  /* ---- Header ---- */
+  /* Header Grid */
 
   .header-grid {
     padding: 1rem;
   }
-
   /* ---- Footer ---- */
 
   .footer-information {
-    max-width: 100%;
+    width: 100%;
     height: 40vh;
     font-weight: 400;
     font-size: 1rem;
