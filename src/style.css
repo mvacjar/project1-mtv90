@@ -464,19 +464,21 @@ svg text {
 
 /* ---- Grid Content --- */
 
-.wrapper-grid {
+/*.wrapper-grid {
   border: 2px solid #ffffff75;
   border-radius: 1px;
   backdrop-filter: blur(15px);
   padding: 0.3rem;
-}
+  display: flex;
+}*/
+
 .container-grid {
-  margin: 1rem 0.5rem;
-  height: 100rem;
+  margin: 1rem 1rem;
   display: grid;
+  height: 150rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
-  grid-gap: 0.5rem;
+  grid-template-rows: minmax(4rem, 0.17fr) minmax(10rem, 1fr) 1fr 1fr 1fr;
+  grid-gap: 1rem;
   grid-template-areas:
     "header-grid header-grid header-grid header-grid"
     "sidebar-grid main-grid main-grid main-grid"
@@ -496,7 +498,7 @@ svg text {
 
 .header-grid {
   grid-area: header-grid;
-  height: 10vh;
+  height: 9vh;
   background-color: var(--color-black);
   padding: 1rem;
   text-align: center;
@@ -509,9 +511,7 @@ svg text {
 
 .main-grid {
   grid-area: main-grid;
-  max-height: rem;
-  overflow: scroll;
-  overflow-y: auto;
+  overflow: auto;
   padding: 1rem 2rem;
   border: 2px solid #ffffff75;
   box-shadow: 5px 5px 12px #00000035;
@@ -522,11 +522,11 @@ svg text {
   margin: 2rem 0rem;
   padding: 2rem;
   background-color: var(--color-purple);
-  box-shadow: 5px 5px 10px #292929;
+  box-shadow: 5px 5px 10px var(--color-black);
 }
 
 .main-grid-news:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: all 0.1s ease;
 }
 
@@ -546,9 +546,12 @@ svg text {
 /* Sidebar */
 
 .sidebar-grid-wrapper {
+  /*
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  height: 100%;
+  height: calc(100% - 10rem);
+  grid-template-rows: 1fr 1fr;*/
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-grid {
@@ -557,6 +560,7 @@ svg text {
   border: 2px solid #ffffff75;
   box-shadow: 5px 5px 12px #00000035;
   backdrop-filter: blur(15px);
+  overflow: auto;
 }
 
 .sidebar-grid h1 {
@@ -584,7 +588,6 @@ svg text {
   border: 2px solid var(--color-black);
   background-color: var(--color-black);
   color: var(--color-white);
-  background-repeat: no-repeat;
 }
 
 .comments-wrap {
@@ -624,7 +627,7 @@ svg text {
   border: 2px solid var(--color-black);
   overflow: auto;
   white-space: wrap;
-  height: 37vw;
+  height: 50%;
 }
 
 .off-topics {
@@ -654,7 +657,7 @@ svg text {
 
 .content-grid-1 {
   grid-area: content-grid-1;
-  padding: 1rem 2rem 2rem 3rem;
+  padding: 1rem 1rem;
   border: 2px solid #ffffff75;
   box-shadow: 5px 5px 12px #00000035;
   backdrop-filter: blur(15px);
@@ -668,13 +671,24 @@ svg text {
   border-radius: 50%;
   float: right;
   margin: 2rem 1rem 0rem 2rem;
+  padding: 0.8rem;
+  background-color: var(--color-purple);
   filter: drop-shadow(5px 5px 10px #292929);
+  animation: beat 0.25s infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes beat {
+  to {
+    transform: scale(1.05);
+  }
 }
 
 .interview-text {
   margin: 0rem 1rem;
   padding: 2rem;
   background-color: var(--color-yellow);
+  box-shadow: 5px 5px 10px var(--color-black);
   overflow: auto;
   font-weight: 500;
 }
@@ -691,13 +705,9 @@ svg text {
   margin-bottom: 1rem;
 }
 
-.interview-link {
-  text-align: end;
-  font-weight: 600;
-}
-
+.interview-link p,
 .interview-link a {
-  text-decoration: none;
+  text-align: end;
   color: var(--color-purple);
 }
 
@@ -705,7 +715,6 @@ svg text {
 
 .content-grid-2 {
   grid-area: content-grid-2;
-  background-color: var(--color-turquoise);
   padding: 1rem;
   border: 2px solid #ffffff75;
   box-shadow: 5px 5px 12px #00000035;
@@ -716,31 +725,97 @@ svg text {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 1rem;
+  padding: 1rem;
+  height: 40vh;
+  background-color: #fd79aeb6;
+  box-shadow: 5px 5px 10px var(--color-black);
+  border-radius: 2px;
 }
 
 .music-list-section li {
-  font-weight: 500;
+  font-weight: 600;
 }
 /* Container 3 */
 
 .content-grid-3 {
   grid-area: content-grid-3;
-  background-color: var(--color-white);
-  padding: 1rem 2rem 2rem 3rem;
+  border: 2px solid #ffffff75;
+  box-shadow: 5px 5px 12px #00000035;
+  backdrop-filter: blur(15px);
+  height: auto;
+}
+
+.content-grid-3 h1 {
+  margin: 1rem;
+}
+
+.container-giveaway {
+  overflow: auto;
+  height: 35vh;
+  background-color: var(--color-orange);
+  box-shadow: 5px 5px 10px var(--color-black);
+  padding: 1rem 0.9rem;
+  margin: 1rem 2rem 2rem 2rem;
+  font-weight: 500;
+}
+
+.container-giveaway b {
+  margin-bottom: 1rem;
+}
+
+/* Footer Grid */
+
+.footer-grid {
+  grid-area: footer-grid;
+  padding: 1rem 2rem 2rem 2rem;
   border: 2px solid #ffffff75;
   box-shadow: 5px 5px 12px #00000035;
   backdrop-filter: blur(15px);
 }
 
-/* Footer */
+.footer-grid h1 {
+  margin-bottom: 3rem;
+}
 
-.footer-grid {
-  grid-area: footer-grid;
+.container-videoclip {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.living-img {
+  padding: 1rem;
+}
+
+.wrapper-article-videoclip {
   background-color: var(--color-yellow);
-  padding: 1rem 2rem 2rem 3rem;
-  border: 2px solid #ffffff75;
-  box-shadow: 5px 5px 12px #00000035;
-  backdrop-filter: blur(15px);
+  box-shadow: 5px 5px 10px var(--color-black);
+}
+
+.article-videoclip {
+  padding: 1rem 2rem;
+  overflow: auto;
+  height: 25vh;
+}
+
+.article-videoclip p {
+  font-weight: 500;
+  text-align: justify;
+  margin-bottom: 1;
+}
+
+.report-link {
+  color: var(--color-black);
+  text-align: justify;
+  line-height: 2;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.report-link p,
+.report-link a {
+  color: var(--color-purple);
 }
 
 /* ---- Brand Section ---- */
@@ -821,6 +896,16 @@ svg text {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+}
+
+.footer-subscribe-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-subscribe-container h2 {
+  color: var(--color-white);
 }
 
 .footer-menu-link {
@@ -829,11 +914,67 @@ svg text {
   line-height: 2;
 }
 
+.footer-subscribe-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer-subscribe-container input {
+  margin-right: 0.5rem;
+  padding: 0.4rem;
+  width: 20rem;
+}
+
+.footer-subscribe-container button {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ff7576;
+  background-color: var(--color-black);
+  box-shadow: 1px 1px 5px var(--color-purple);
+  border: none;
+  padding: 0.4rem 1rem;
+  position: relative;
+  border-radius: 9px;
+  transform: scale(var(--s, 1)) perspective(600px) rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
+  perspective: 600px;
+  transition: transform 0.1s;
+}
+
+.sp {
+  background: linear-gradient(
+    90deg,
+    #866ee7,
+    #ea60da,
+    #ed8f57,
+    #fbd41d,
+    #2cca91
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+}
+
+.footer-subscribe-container button:active {
+  transition: 0.3s;
+  transform: scale(0.93);
+}
+
 .footer-menu-link:hover {
   color: var(--color-yellow);
 }
 
 /* ---- Media Query ---- */
+
+@media (max-width: 150rem) {
+  .container-grid {
+    height: 230vh;
+  }
+}
 
 @media (min-width: 112rem) {
   @keyframes translateBrand {
@@ -843,6 +984,24 @@ svg text {
     100% {
       transform: translateX(-2800px);
     }
+  }
+
+  .container-grid {
+    height: 200vh;
+  }
+  .footer-grid h1 {
+    margin-bottom: 1rem;
+  }
+
+  .container-videoclip {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 78rem) {
+  .container-grid {
+    height: 250vh;
   }
 }
 
@@ -1056,6 +1215,7 @@ svg text {
   /* ---- Grid Content ---- */
 
   .container-grid {
+    height: 200rem;
     margin: 0.1rem;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 0.3fr 3fr 2fr 2fr 2fr 2.5fr;
@@ -1064,40 +1224,120 @@ svg text {
       "header-grid header-grid"
       "sidebar-grid main-grid"
       "sidebar-grid content-grid-1"
-      "sidebar-grid content-grid-2"
-      "sidebar-grid content-grid-3"
+      "content-grid-2 content-grid-2"
+      "content-grid-3 content-grid-3"
       "footer-grid footer-grid";
   }
 
-  /* Header */
+  /* ---- Header Grid ---- */
 
   .header-grid {
-    height: auto;
-    font-weight: 800;
-    font-size: 2rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
   }
 
-  /* Main */
+  /* ---- Sidebar Grid ---- */
 
-  .main-grid {
-    height: 55vw;
+  .comments-section {
+    height: 40vh;
   }
 
-  /* Content 1 */
+  .comments-wrap {
+    height: 10%;
+  }
 
-  .interview-section {
+  .container-off-topic {
+    height: 65vh;
+  }
+
+  .off-topic-links {
     display: flex;
     flex-direction: column;
   }
 
-  .interview-image {
-    max-width: 100%;
+  /* Content Grid 1 */
+
+  .interview-text {
+    overflow: auto;
+    height: 30vh;
   }
 
+  .interview-text p {
+    text-align: start;
+  }
+
+  .interview-text h2 {
+    margin-bottom: 6rem;
+  }
+
+  .eva-interview {
+    margin: 0rem 1rem 0rem 2rem;
+  }
+
+  /* Content Grid 2 */
+
+  .music-list-section ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+    padding: 1rem;
+    height: 32vh;
+    line-height: 1;
+  }
+
+  /* Content Grid 3 */
+
+  .content-grid-3 {
+    overflow: auto;
+  }
+
+  .container-giveaway {
+    height: 32vh;
+    line-height: 2;
+  }
+
+  /* ---- Footer Grid ---- */
+
+  .footer-grid h1 {
+    margin-bottom: 1rem;
+  }
+
+  .container-videoclip {
+    flex-direction: column;
+    align-items: center;
+  }
   /* ---- Brand Section ---- */
+
+  .container-brand {
+    padding: 3rem 0rem;
+    margin: 5rem 4rem;
+  }
 
   .item-brand {
     grid-row-gap: 100px;
+  }
+
+  /* ---- Footer ---- */
+
+  .footer-information {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-sign {
+    margin: 0rem;
+  }
+
+  .footer-sign {
+    text-align: center;
+  }
+
+  .footer-menu-link {
+    line-height: 1;
   }
 }
 
@@ -1204,7 +1444,7 @@ svg text {
 
   .container-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 4fr 3fr 7fr 7fr 7fr 5fr;
+    grid-template-rows: 0.4fr minmax(30vh, 1fr) minmax(40vh, 1fr) 7fr 7fr 7fr 5fr;
     grid-gap: 0.5rem;
     grid-template-areas:
       "header-grid"
@@ -1216,17 +1456,37 @@ svg text {
       "footer-grid";
   }
 
+  /* ---- Header ---- */
+
+  .header-grid {
+    padding: 1rem;
+  }
+
   /* ---- Footer ---- */
 
   .footer-information {
     max-width: 100%;
-    height: 20vh;
+    height: 40vh;
     font-weight: 400;
     font-size: 1rem;
   }
 
   .footer-sign {
     text-align: center;
+    margin: 0rem;
+  }
+
+  .footer-subscribe-container form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-subscribe-container input {
+    width: 15rem;
+  }
+
+  .footer-subscribe-container button {
+    margin: 1rem;
   }
 
   .footer-menu {
