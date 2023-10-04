@@ -6,6 +6,12 @@
   --color-orange: #f07e66;
   --color-black: #212529;
   --color-white: #fff;
+  --font-size-xs: 0.7rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.3rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 3rem;
 }
 
 *,
@@ -76,7 +82,7 @@ li {
 .menu-items a {
   text-decoration: none;
   color: var(--color-yellow);
-  font-size: 1.7rem;
+  font-size: var(--font-size-lg);
   transition: color 0.3s ease-in-out;
 }
 
@@ -93,17 +99,7 @@ li {
 }
 
 .welcome-wallpapper-images {
-  animation: slideToDown 1.2s ease-in-out;
 }
-
-/*@keyframes slideToDown {
-  from {
-    transform: translateY(-100vh);
-  }
-  to {
-    transform: translateY(0);
-  }
-}*/
 
 .img-wallpapper-lg {
   max-width: 100%;
@@ -114,6 +110,15 @@ li {
 }
 
 /* ---- Login Form ---- */
+
+/*@keyframes slideToRight {
+  from {
+    transform: translateX(100vh);
+  }
+  to {
+    transform: translateX(0);
+  }
+}*/
 
 .login-form {
   border-top: 2px solid #ffffff75;
@@ -135,15 +140,6 @@ li {
   align-items: center;
   gap: 6px;
 }
-
-/*@keyframes slideToRight {
-  from {
-    transform: translateX(100vh);
-  }
-  to {
-    transform: translateX(0);
-  }
-}*/
 
 .form-one {
   display: flex;
@@ -174,6 +170,7 @@ input::placeholder {
   text-shadow: 2px 2px 2px var(--color-black);
   margin: 0rem 1rem;
 }
+
 .login-button {
   background-color: var(--color-purple);
   padding: 0.3rem 0.8rem;
@@ -187,16 +184,6 @@ input::placeholder {
 .signup-button a {
   text-decoration: none;
   color: var(--color-white);
-}
-
-.join-text a {
-  font-size: 1.8em;
-  margin-left: auto;
-  margin-right: auto;
-  animation: lightCrew 5s ease;
-  animation-iteration-count: infinite;
-  text-shadow: 3px 3px 2px #161b49;
-  text-decoration: none;
 }
 
 @keyframes lightCrew {
@@ -215,6 +202,16 @@ input::placeholder {
   to {
     color: var(--color-orange);
   }
+}
+
+.join-text a {
+  font-size: var(--font-size-xl);
+  margin-left: auto;
+  margin-right: auto;
+  animation: lightCrew 5s ease;
+  animation-iteration-count: infinite;
+  text-shadow: 3px 3px 2px #161b49;
+  text-decoration: none;
 }
 
 /* --- Advertisment --- */
@@ -336,7 +333,7 @@ svg text {
 .card-front {
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: var(--font-size-xl);
   padding: 1.5rem;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #30d2ca);
@@ -354,7 +351,7 @@ svg text {
 
 .portrait-text {
   margin-bottom: 0.8em;
-  font-size: 2rem;
+  font-size: var(--font-size-xl);
   font-weight: 700;
   margin-top: 1rem;
   display: flex;
@@ -367,7 +364,7 @@ svg text {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: var(--font-size-lg);
   font-weight: 600;
   color: var(--color-black);
   text-shadow: 2px 2px 2px var(--color-purple);
@@ -391,16 +388,6 @@ svg text {
   gap: 6rem;
 }
 
-.text-onsale {
-  position: relative;
-  display: inline-block;
-  font-weight: 800;
-  font-size: 2rem;
-  color: var(--color-purple);
-  -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-  animation: jumperText 1s ease infinite;
-}
-
 @keyframes jumperText {
   0% {
     transform: translateY(0px);
@@ -414,19 +401,23 @@ svg text {
   }
 }
 
+.text-onsale {
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+  font-size: var(--font-size-xl);
+  color: var(--color-purple);
+  -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  animation: jumperText 1s ease infinite;
+}
+
 .button-onsale {
   background-color: var(--color-purple);
   color: var(--color-turquoise);
-  font-size: 1.5rem;
+  font-size: var(--font-size-lg);
   font-weight: 700;
   padding: 0.5rem 1rem;
   text-shadow: 2px 2px 2px #161b49;
-}
-
-.button-onsale:hover {
-  color: var(--color-purple);
-  background-color: var(--color-turquoise);
-  animation: shake 0.5s;
 }
 
 @keyframes shake {
@@ -465,6 +456,12 @@ svg text {
   }
 }
 
+.button-onsale:hover {
+  color: var(--color-purple);
+  background-color: var(--color-turquoise);
+  animation: shake 0.5s;
+}
+
 /* ---- Grid Content --- */
 
 .container-grid {
@@ -484,7 +481,7 @@ svg text {
 
 .container-grid h1 {
   color: var(--color-white);
-  font-size: 2rem;
+  font-size: var(--font-size-xl);
   text-align: center;
   text-shadow: 2px 2px 3px var(--color-black);
 }
@@ -499,7 +496,7 @@ svg text {
   text-align: center;
   color: var(--color-white);
   font-weight: 800;
-  font-size: 3rem;
+  font-size: var(--font-size-xxl);
 }
 
 /* Main */
@@ -526,10 +523,9 @@ svg text {
 }
 
 .main-grid-news h2 {
-  font-size: 2rem;
+  font-size: var(--font-size-xl);
   line-height: 1;
   margin-bottom: 1rem;
-  font-size: 2rem;
   text-shadow: 2px 2px 5px #323d9d;
 }
 
@@ -658,6 +654,12 @@ svg text {
   margin: 1rem 0rem;
 }
 
+@keyframes beat {
+  to {
+    transform: scale(1.05);
+  }
+}
+
 .eva-interview {
   border-radius: 50%;
   float: right;
@@ -667,12 +669,6 @@ svg text {
   filter: drop-shadow(5px 5px 10px #292929);
   animation: beat 0.25s infinite alternate;
   transform-origin: center;
-}
-
-@keyframes beat {
-  to {
-    transform: scale(1.05);
-  }
 }
 
 .interview-text {
@@ -685,7 +681,7 @@ svg text {
 }
 
 .interview-text h2 {
-  font-size: 2rem;
+  font-size: var(--font-size-xl);
   text-shadow: 2px 2px 5px var(--color-purple);
 }
 
@@ -818,7 +814,7 @@ img .living-img {
 /* ---- Brand Section ---- */
 
 .container-brand {
-  display: block;
+  display: flex;
   padding: 10rem 0rem;
   margin: 10rem 5rem;
   overflow: hidden;
@@ -828,24 +824,27 @@ img .living-img {
   box-shadow: 10px 10px 20px var(--color-black);
 }
 
+@keyframes marquee {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: -100%;
+  }
+}
+
 .inner-up-brand,
 .inner-down-brand {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   align-items: center;
-  animation: translateBrand 14s infinite;
-  animation-timing-function: linear;
   filter: drop-shadow(5px 5px 10px #292929);
-}
-
-@keyframes translateBrand {
-  0% {
-    transform: translateX(1300px);
-  }
-  100% {
-    transform: translateX(-2500px);
-  }
+  translate: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  animation: marquee 20s linear infinite;
 }
 
 .inner-up-brand {
@@ -871,7 +870,7 @@ img .living-img {
   align-items: center;
   justify-content: space-evenly;
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: var(--font-size-md);
 }
 
 .footer-sign {
@@ -926,8 +925,8 @@ img .living-img {
 }
 
 .footer-subscribe-container button {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
   color: #ff7576;
   background-color: var(--color-black);
   box-shadow: 1px 1px 5px var(--color-purple);
@@ -941,7 +940,7 @@ img .living-img {
   transition: transform 0.1s;
 }
 
-.sp {
+.footer-subscribe-container span {
   background: linear-gradient(
     90deg,
     #866ee7,
@@ -978,14 +977,7 @@ img .living-img {
 }
 
 @media (min-width: 112rem) {
-  @keyframes translateBrand {
-    0% {
-      transform: translateX(1500px);
-    }
-    100% {
-      transform: translateX(-2800px);
-    }
-  }
+  /* --- Grid Layout --- */
 
   .container-grid {
     height: 200vh;
@@ -1001,6 +993,8 @@ img .living-img {
 }
 
 @media (max-width: 78rem) {
+  /* --- Grid Layout --- */
+
   .container-grid {
     height: 250vh;
   }
@@ -1217,7 +1211,7 @@ img .living-img {
   }
 
   .card-front {
-    font-size: 1.5rem;
+    font-size: var(--font-size-lg);
     padding: 1rem;
     border: 2px solid var(--color-black);
     border-radius: 1px;
@@ -1229,14 +1223,14 @@ img .living-img {
 
   .portrait-text {
     margin-bottom: 0.8em;
-    font-size: 1.6rem;
+    font-size: var(--font-size-lg);
     font-weight: 600;
     margin-top: 1.5rem;
     text-shadow: 1px 1px 2px var(--color-purple);
   }
 
   .card-back {
-    font-size: 1.2rem;
+    font-size: var(--font-size-md);
     font-weight: 500;
     text-shadow: 2px 2px 2px var(--color-purple);
     border: 2px solid var(--color-black);
@@ -1253,11 +1247,11 @@ img .living-img {
 
   .text-onsale {
     font-weight: 800;
-    font-size: 1.3rem;
+    font-size: var(--font-size-md);
   }
 
   .button-onsale {
-    font-size: 0.7rem;
+    font-size: var(--font-size-xs);
     font-weight: 600;
     padding: 0.2rem 0.4rem;
     text-shadow: 2px 2px 2px var(--color-purple);
@@ -1291,7 +1285,7 @@ img .living-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: var(--font-size-xl);
   }
 
   /* ---- Sidebar Grid ---- */
@@ -1461,7 +1455,7 @@ img .living-img {
   }
 
   .card-front {
-    font-size: 1.5rem;
+    font-size: var(--font-size-lg);
     padding: 1rem;
     border: 2px solid var(--color-black);
     border-radius: 1px;
@@ -1473,14 +1467,14 @@ img .living-img {
 
   .portrait-text {
     margin-bottom: 0.8em;
-    font-size: 1.6rem;
+    font-size: var(--font-size-lg);
     font-weight: 600;
     margin-top: 1.5rem;
     text-shadow: 1px 1px 2px var(--color-purple);
   }
 
   .card-back {
-    font-size: 1.2rem;
+    font-size: var(--font-size-md);
     font-weight: 500;
     text-shadow: 2px 2px 2px var(--color-purple);
     border: 2px solid var(--color-black);
@@ -1516,7 +1510,7 @@ img .living-img {
     width: 100%;
     height: 40vh;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: var(--font-size-sm);
   }
 
   .footer-sign {
