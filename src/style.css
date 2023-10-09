@@ -589,7 +589,7 @@ svg text {
   display: grid;
   height: 150rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: minmax(10rem, 1fr) minmax(20rem, 1fr) 1fr 1fr 1fr;
+  grid-template-rows: minmax(7rem, 1fr) minmax(30rem, 1fr) 1fr 1fr 1fr;
   grid-gap: 1rem;
   grid-template-areas:
     "header-grid header-grid header-grid header-grid"
@@ -1142,8 +1142,7 @@ img .living-img {
 
   .container-grid {
     height: 100vh;
-    grid-template-rows: minmax(7rem, 1fr) minmax(10rem, 1fr) 1fr 1fr 1fr;
-    margin-bottom: 75rem;
+    margin-bottom: 95rem;
   }
 
   /* Grid Header */
