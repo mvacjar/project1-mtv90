@@ -1229,13 +1229,11 @@ img .living-img {
     grid-template-rows: minmax(5.5rem, 0.17fr) minmax(25rem, 1fr) 1fr, 1fr;
     grid-template-areas:
       "header-grid header-grid header-grid"
-      "main-grid main-grid main-grid"
-      "content-grid-1 content-grid-1 content-grid-1"
-      "content-grid-2 content-grid-2 content-grid-3"
+      "sidebar-grid main-grid main-grid"
+      "sidebar-grid content-grid-1 content-grid-1"
+      "sidebar-grid content-grid-2 content-grid-3"
       "footer-grid footer-grid footer-grid";
   }
-
-  /* Grid Sidebar */
 
   /* Content Grid 1 */
 
