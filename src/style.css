@@ -29,6 +29,19 @@ li {
   list-style: none;
 }
 
+input {
+  background-color: #2ed3cbca;
+  width: 10rem;
+  margin-right: 0.5rem;
+  padding: 0.4rem;
+}
+
+input::placeholder {
+  color: var(--color-black);
+  padding-left: 3px;
+  font-family: "Verdana", Tahoma, sans-serif;
+}
+
 /* Global */
 
 html {
@@ -251,21 +264,18 @@ body {
   animation: slideToRight 1.5s ease-in-out;
 }
 
+.wrapper-form {
+  display: flex;
+  justify-content: start;
+}
+
 .form-one {
   display: flex;
   flex-direction: row;
 }
 
-input {
-  background-color: #2ed3cbca;
-  padding: 3px 0px;
-  width: 10rem;
-}
-
-input::placeholder {
-  color: var(--color-black);
-  padding-left: 3px;
-  font-family: "Verdana", Tahoma, sans-serif;
+.input-username {
+  margin-right: 1rem;
 }
 
 .buttons {
@@ -579,7 +589,7 @@ svg text {
   display: grid;
   height: 150rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: minmax(4rem, 1fr) minmax(10rem, 1fr) 1fr 1fr 1fr;
+  grid-template-rows: minmax(10rem, 1fr) minmax(10rem, 1fr) 1fr 1fr 1fr;
   grid-gap: 1rem;
   grid-template-areas:
     "header-grid header-grid header-grid header-grid"
@@ -1026,8 +1036,6 @@ img .living-img {
 }
 
 .footer-subscribe-container input {
-  margin-right: 0.5rem;
-  padding: 0.4rem;
   width: 20rem;
 }
 
