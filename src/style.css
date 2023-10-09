@@ -333,7 +333,7 @@ body {
   text-decoration: none;
 }
 
-/* --- Advertisment --- */
+/* ---- Advertisment Banner ---- */
 
 .banner-container {
   display: flex;
@@ -347,7 +347,7 @@ body {
   width: 100%;
 }
 
-/* --- Video Title --- */
+/* ---- Video Title ---- */
 
 .video-text-wrapper {
   padding-bottom: 1rem;
@@ -1237,9 +1237,6 @@ img .living-img {
 
   /* Grid Sidebar */
 
-  .sidebar-grid {
-    display: none;
-  }
   /* Content Grid 1 */
 
   .interview-text {
