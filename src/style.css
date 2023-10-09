@@ -1142,8 +1142,8 @@ img .living-img {
   /* --- Grid Layout --- */
 
   .container-grid {
-    height: 100vh;
-    margin-bottom: 95rem;
+    height: 140vh;
+    margin-bottom: 70rem;
   }
 
   /* Grid Header */
@@ -1164,7 +1164,7 @@ img .living-img {
 
   .container-grid {
     grid-template-rows: minmax(7rem, 1fr) minmax(10rem, 1fr) 1fr 1fr 1fr;
-    margin-bottom: 75rem;
+    margin-bottom: 95rem;
   }
 
   /* Grid Header */
@@ -1196,7 +1196,7 @@ img .living-img {
   /* --- Grid Layout --- */
 
   .container-grid {
-    margin-bottom: 85rem;
+    margin-bottom: 80rem;
   }
 
   /* Grid Sidebar */
