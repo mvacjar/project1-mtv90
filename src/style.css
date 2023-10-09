@@ -586,6 +586,7 @@ svg text {
 
 .container-grid {
   margin: 1rem 2rem;
+  position: relative;
   display: grid;
   height: 150rem;
   grid-template-columns: repeat(4, 1fr);
@@ -1142,7 +1143,7 @@ img .living-img {
 
   .container-grid {
     height: 100vh;
-    margin-bottom: 120rem;
+    margin-bottom: 95rem;
   }
 
   /* Grid Header */
