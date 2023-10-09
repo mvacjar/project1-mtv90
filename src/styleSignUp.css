@@ -1,3 +1,5 @@
+/* Reset */
+
 :root {
   --color-purple: #4551c7;
   --color-yellow: #fee452;
@@ -6,6 +8,12 @@
   --color-orange: #f07e66;
   --color-black: #212529;
   --color-white: #fff;
+  --font-size-xs: 0.7rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.3rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 3rem;
 }
 
 *,
@@ -16,13 +24,15 @@
   margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 img {
   max-width: 100%;
   display: block;
+}
+
+/* Global */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -31,7 +41,7 @@ body {
   padding-top: 5rem;
 }
 
-/* ---- navbar ---- */
+/* ---- Navbar ---- */
 
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
@@ -79,7 +89,7 @@ body {
 .menu-items a {
   text-decoration: none;
   color: var(--color-yellow);
-  font-size: 25px;
+  font-size: var(--font-size-lg);
   transition: color 0.3s ease-in-out;
 }
 
@@ -106,6 +116,8 @@ main {
   padding: 3rem;
   margin: 1rem;
   height: 35rem;
+  place-content: center;
+  place-items: center;
 }
 
 /* --- Welcomming --- */
@@ -122,7 +134,7 @@ main {
 }
 
 .heading-title {
-  font-size: 3rem;
+  font-size: var(--font-size-xxl);
   font-weight: 800;
   line-height: 1.3;
   text-align: end;
@@ -130,7 +142,7 @@ main {
 }
 
 .welcoming-text {
-  font-size: 1.4rem;
+  font-size: var(--font-size-lg);
   font-weight: 500;
   text-align: justify;
   line-height: 1.3;
@@ -152,7 +164,7 @@ main {
 }
 
 .form-title {
-  font-size: 3rem;
+  font-size: var(--font-size-xxl);
   font-weight: 800;
   line-height: 1.3;
   text-shadow: 2px 3px 2px var(--color-black);
@@ -170,7 +182,7 @@ main {
 .form-information label {
   display: table-cell;
   text-shadow: 2px 2px 2px var(--color-black);
-  font-size: 1.4rem;
+  font-size: var(--font-size-lg);
   font-weight: 500;
 }
 
@@ -195,7 +207,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: var(--font-size-sm);
   text-shadow: 2px 2px 2px var(--color-black);
 }
 
@@ -213,7 +225,7 @@ main {
 
 .buttons button {
   padding: 0.2rem 0.8rem;
-  font-size: 1rem;
+  font-size: var(--font-size-sm);
   font-weight: 500;
   font-family: "Poppins", Verdana, sans-serif;
   margin: 0rem 1rem;
@@ -243,19 +255,19 @@ main {
   }
 
   .heading-title {
-    font-size: 2.3rem;
+    font-size: var(--font-size-xl);
     line-height: 1.1;
   }
 
   .welcoming-text {
-    font-size: 1.2rem;
+    font-size: var(--font-size-md);
     line-height: 1.2;
   }
 
   /* --- Join Form --- */
 
   .form-title {
-    font-size: 2.3rem;
+    font-size: var(--font-size-xl);
   }
 }
 
@@ -393,7 +405,7 @@ main {
   }
 
   .welcoming-text {
-    font-size: 1.2rem;
+    font-size: var(--font-size-md);
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 3rem;
@@ -410,12 +422,12 @@ main {
   .form-check {
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: var(--font-size-sm);
   }
 
   .buttons button {
     padding: 0.2rem 0.5rem;
-    font-size: 0.8rem;
+    font-size: var(--font-size-xs);
     font-weight: 400;
   }
 }

@@ -99,7 +99,6 @@ body {
 .menu-items a {
   text-decoration: none;
   color: var(--color-yellow);
-  font-size: var(--font-size-lg);
   transition: color 0.3s ease-in-out;
 }
 
