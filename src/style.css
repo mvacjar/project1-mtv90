@@ -1,3 +1,5 @@
+/* Reset */
+
 :root {
   --color-purple: #4551c7;
   --color-yellow: #fee452;
@@ -22,6 +24,13 @@
   margin: 0;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
+/* Global */
+
 html {
   scroll-behavior: smooth;
 }
@@ -31,12 +40,7 @@ body {
   background: url("../images/background1.png");
 }
 
-ul,
-li {
-  list-style: none;
-}
-
-/* ---- navbar ---- */
+/* ---- Navbar ---- */
 
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
@@ -217,14 +221,14 @@ li {
 
 /* ---- Login Form ---- */
 
-/*@keyframes slideToRight {
+@keyframes slideToRight {
   from {
     transform: translateX(100vh);
   }
   to {
     transform: translateX(0);
   }
-}*/
+}
 
 .login-form {
   border-top: 2px solid #ffffff75;
@@ -1152,6 +1156,9 @@ img .living-img {
     height: 200vh;
     grid-template-rows: minmax(3rem, 0.5fr) minmax(10rem, 1fr) 1fr 1fr 1fr;
   }
+
+  /* Grid Footer */
+
   .footer-grid h1 {
     margin-bottom: 1rem;
   }
@@ -1168,6 +1175,8 @@ img .living-img {
   .container-grid {
     height: 250vh;
   }
+
+  /* Grid Footer */
 
   .container-videoclip {
     display: flex;
