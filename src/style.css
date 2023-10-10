@@ -913,21 +913,23 @@ img .living-img {
 .article-videoclip p {
   font-weight: 500;
   text-align: justify;
-  margin-bottom: 1;
+  margin-bottom: 1rem;
 }
 
 .report-link {
   color: var(--color-black);
   text-align: justify;
   line-height: 2;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  margin-left: 2rem;
 }
 
 .report-link p,
 .report-link a {
   color: var(--color-purple);
+}
+
+.report-link p {
+  padding: 1rem 2rem;
+  line-height: 1.1;
 }
 
 /* ---- Brand Section ---- */
